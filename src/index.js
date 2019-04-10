@@ -8,6 +8,7 @@ import store from './redux/store';
 
 import '../mock/mock.js';
 
+
 ReactDom.render(
     <Provider store={store}>
         <Router>
