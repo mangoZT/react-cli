@@ -6,7 +6,7 @@ class Counter extends PureComponent {
     render() {
         return (
             <div>
-                <div>当前计数为{this.props.count}</div>
+                <div>当前计数为{this.props.counter.count}</div>
                 <button onClick={() => this.props.increment()}>自增
                 </button>
                 <button onClick={() => this.props.decrement()}>自减
@@ -17,7 +17,7 @@ class Counter extends PureComponent {
         )
     }
 }
-export default connect(({counter}) => counter, dispatch => ({
+export default connect((counter) => counter, dispatch => ({
     increment: () => {
         dispatch(increment())
     },
